@@ -12,7 +12,7 @@ Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 
 // cpp_run_tabu_search
 Rcpp::List cpp_run_tabu_search(Rcpp::NumericMatrix X_in, Rcpp::IntegerVector y_in, double b0, int d, int iSeed);
-RcppExport SEXP _tabusearch_cpp_run_tabu_search(SEXP X_inSEXP, SEXP y_inSEXP, SEXP b0SEXP, SEXP dSEXP, SEXP iSeedSEXP) {
+RcppExport SEXP _hitsr_cpp_run_tabu_search(SEXP X_inSEXP, SEXP y_inSEXP, SEXP b0SEXP, SEXP dSEXP, SEXP iSeedSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -27,11 +27,11 @@ END_RCPP
 }
 
 static const R_CallMethodDef CallEntries[] = {
-    {"_tabusearch_cpp_run_tabu_search", (DL_FUNC) &_tabusearch_cpp_run_tabu_search, 5},
+    {"_hitsr_cpp_run_tabu_search", (DL_FUNC) &_hitsr_cpp_run_tabu_search, 5},
     {NULL, NULL, 0}
 };
 
-RcppExport void R_init_tabusearch(DllInfo *dll) {
+RcppExport void R_init_hitsr(DllInfo *dll) {
     R_registerRoutines(dll, NULL, CallEntries, NULL, NULL);
     R_useDynamicSymbols(dll, FALSE);
 }
