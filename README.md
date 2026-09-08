@@ -143,4 +143,22 @@ cat("======================================================== ")
 
 ## License
 
+---
+
+## Citation
+
+If you use `hitsr` in your research, please cite the underlying methodology paper:
+
+```bibtex
+@article{FLORIOS2025102164,
+  title   = {HITS: Hyperplanes intersection tabu search for maximum score estimation},
+  author  = {Kostas Florios and Apostolos Louka and Yiannis Bilias},
+  journal = {SoftwareX},
+  volume  = {30},
+  pages   = {102164},
+  year    = {2025},
+  issn    = {2352-7110},
+  doi     = {10.1016/j.softx.2025.102164}
+}
+
 Distributed under the GPL-2 / GPL-3 License. See `LICENSE` for details.
