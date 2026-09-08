@@ -1,4 +1,4 @@
-Package: tabusearch
+Package: hitsr
 Type: Package
 Title: Discrete Tabu Search
 Version: 0.1.0
