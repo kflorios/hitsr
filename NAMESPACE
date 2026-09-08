@@ -1,0 +1,3 @@
+useDynLib(tabusearch, .registration = TRUE)
+importFrom(Rcpp, evalCpp)
+export(run_tabu_search)
