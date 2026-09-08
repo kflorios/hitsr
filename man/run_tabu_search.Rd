@@ -23,4 +23,3 @@ A list containing best attributes, coefficients, and best score.
 \description{
 Run Discrete Tabu Search
 }
-
