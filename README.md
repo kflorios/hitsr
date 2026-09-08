@@ -76,67 +76,60 @@ This benchmark demonstrates how to execute 20 distinct random restarts using `hi
 ```R
 library(hitsr)
 
-# -----------------------------------------------------------------------------
-# 1. Load Data
-# -----------------------------------------------------------------------------
-# Expecting standard tabular input files X.txt and y.txt
+# 1. Load and preprocess data
 X_raw <- as.matrix(read.table("X.txt"))
 y_raw <- as.matrix(read.table("y.txt"))
 
-# Extract design matrix X and target y
 X <- X_raw[, 2:ncol(X_raw)]
 y <- as.integer(y_raw[, 2])
 
-# -----------------------------------------------------------------------------
-# 2. Execution Setup
-# -----------------------------------------------------------------------------
+# 2. Parameters
 b0 <- -1.0
-d  <- 10
+d <- 10
 num_runs <- 20
 
-# Generate 20 reproducible seeds
-set.seed(42)
+# Generate 20 distinct random seeds
+set.seed(42) # For reproducible seed generation
 seeds <- sample.int(1e6, num_runs)
 
-# Preallocate container
+# 3. Storage for results
 results_list <- vector("list", num_runs)
 
-cat("Running 20 Tabu Search iterations across different random seeds...")
+cat("Starting 20 runs...\n")
 
-# -----------------------------------------------------------------------------
-# 3. Multi-Seed Loop
-# -----------------------------------------------------------------------------
+# 4. Run loop
 for (i in seq_len(num_runs)) {
   current_seed <- seeds[i]
   
-  # Run discrete tabu search
+  # Execute Tabu Search
   res <- run_tabu_search(X = X, y = y, b0 = b0, d = d, iSeed = current_seed)
   
-  # Store per-run statistics
+  # Format selected attributes as a string (e.g., "1, 4, 7")
+  attr_str <- paste(res$attributes, collapse = ", ")
+  
+  # Save metrics
   results_list[[i]] <- data.frame(
-    Run            = i,
-    Seed           = current_seed,
-    Score          = res$score,
+    Run = i,
+    Seed = current_seed,
+    Score = res$score,
+    Coeffs = res$coeffs,
     Num_Attributes = length(res$attributes),
-    Attributes     = paste(res$attributes, collapse = ", "),
+    Attributes = attr_str,
     stringsAsFactors = FALSE
   )
 }
 
-# Combine into a single structured summary table
+# 5. Combine into a single data frame
 results_df <- do.call(rbind, results_list)
 
-# Display tabular output
+# 6. Display results table
 print(results_df, row.names = FALSE)
 
-# -----------------------------------------------------------------------------
-# 4. Global Performance Summary
-# -----------------------------------------------------------------------------
-cat("================ Summary Across 20 Runs ================")
-cat(sprintf("Best Score Found:  %10.4f ", max(results_df$Score)))
-cat(sprintf("Mean Score:        %10.4f ", mean(results_df$Score)))
-cat(sprintf("Score Std. Dev.:   %10.4f ", sd(results_df$Score)))
-cat("======================================================== ")
+# 7. Summary statistics
+cat("\n=== Summary Across 20 Runs ===\n")
+cat("Best Score Found: ", max(results_df$Score), "\n")
+cat("Mean Score:       ", mean(results_df$Score), "\n")
+cat("Score Std Dev:    ", sd(results_df$Score), "\n")
 ```
 
 ---
