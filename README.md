@@ -6,7 +6,7 @@ High-performance C++ OpenMP implementation of discrete tabu search for maximum s
 [![R-CMD-check](https://img.shields.io/badge/R--build-passing-brightgreen.svg)](#)
 [![License: GPL v2+](https://img.shields.io/badge/License-GPL%20v2%2B-blue.svg)](#)
 
-`hitsr` is a high-performance R package providing OpenMP-accelerated C++ implementations of discrete Tabu Search for feature selection and high-dimensional optimization problems. It seamlessly bridges fast low-level computational routines with an intuitive R interface.
+`hitsr` is a high-performance R package providing OpenMP-accelerated C++ implementations of discrete Tabu Search for maximum score estimation and high-dimensional optimization problems. It seamlessly bridges fast low-level computational routines with an intuitive R interface.
 
 ---
 
@@ -56,16 +56,16 @@ run_tabu_search(X, y, b0 = -1.0, d = 10, iSeed = 123456)
 | :--- | :--- | :--- | :--- |
 | `X` | `matrix` | *Required* | Feature matrix of size $T \times p_{\text{in}}$. |
 | `y` | `vector` | *Required* | Integer response/target vector of length $T$. |
-| `b0` | `numeric` | `-1.0` | Intercept parameter / threshold value. |
+| `b0` | `numeric` | `-1.0` | Coefficient for first column of feature matrix. |
 | `d` | `integer` | `10` | Neighborhood depth / search parameter. |
 | `iSeed` | `integer` | `123456` | Pseudo-random number generator seed. |
 
 ### Return Value
 
 A named `list` containing:
-- `attributes`: Vector of selected feature indices (1-based R indexing).
+- `attributes`: Vector of selected observations indices (1-based R indexing).
 - `coeffs`: Estimated model parameters/coefficients for the selected subset.
-- `score`: Evaluation score associated with the optimal feature set.
+- `score`: Evaluation score associated with the optimal observations set.
 
 ---
 
@@ -146,7 +146,7 @@ If you use `hitsr` in your research, please cite the underlying methodology pape
 ```bibtex
 @article{FLORIOS2025102164,
   title   = {HITS: Hyperplanes intersection tabu search for maximum score estimation},
-  author  = {Kostas Florios and Apostolos Louka and Yiannis Bilias},
+  author  = {Kostas Florios and Apostolos Louka and Yannis Bilias},
   journal = {SoftwareX},
   volume  = {30},
   pages   = {102164},
