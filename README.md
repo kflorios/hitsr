@@ -137,14 +137,10 @@ print(results_df, row.names = FALSE)
 cat("
 ================ Summary Across 20 Runs ================
 ")
-cat(sprintf("Best Score Found:  %10.4f
-", max(results_df$Score)))
-cat(sprintf("Mean Score:        %10.4f
-", mean(results_df$Score)))
-cat(sprintf("Score Std. Dev.:   %10.4f
-", sd(results_df$Score)))
-cat("========================================================
-")
+cat(sprintf("Best Score Found:  %10.4f ", max(results_df$Score)))
+cat(sprintf("Mean Score:        %10.4f ", mean(results_df$Score)))
+cat(sprintf("Score Std. Dev.:   %10.4f ", sd(results_df$Score)))
+cat("======================================================== ")
 ```
 
 ---
