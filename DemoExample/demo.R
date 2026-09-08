@@ -1,4 +1,4 @@
-library(tabusearch)
+library(hitsr)
 
 # 1. Load Data
 # Adjust these paths if X.txt and y.txt are stored in a different directory
