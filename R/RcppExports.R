@@ -2,7 +2,6 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 cpp_run_tabu_search <- function(X_in, y_in, b0, d, iSeed) {
-    .Call(`_tabusearch_cpp_run_tabu_search`, X_in, y_in, b0, d, iSeed)
+    .Call(`_hitsr_cpp_run_tabu_search`, X_in, y_in, b0, d, iSeed)
 }
-
 
