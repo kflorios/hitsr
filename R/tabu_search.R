@@ -6,7 +6,7 @@
 #' @param d Integer parameter.
 #' @param iSeed Integer, random number generator seed.
 #' @return A list containing best attributes, coefficients, and best score.
-#' @useDynLib tabusearch, .registration = TRUE
+#' @useDynLib hitsr, .registration = TRUE
 #' @importFrom Rcpp evalCpp
 #' @export
 run_tabu_search <- function(X, y, b0 = -1.0, d = 10, iSeed = 123456) {
