@@ -152,6 +152,8 @@ If you use `hitsr` in your research, please cite the underlying methodology pape
   pages   = {102164},
   year    = {2025},
   issn    = {2352-7110},
+  doi     = {10.1016/j.softx.2025.102164}
+}
 
 @article{manski1975maximum,
   title={Maximum score estimation of the stochastic utility model of choice},
@@ -163,7 +165,7 @@ If you use `hitsr` in your research, please cite the underlying methodology pape
   year={1975},
   publisher={Elsevier}
 }
-  doi     = {10.1016/j.softx.2025.102164}
-}
+  
+
 
 
