@@ -1,7 +1,7 @@
 # hitsr
 High-performance C++ OpenMP implementation of discrete tabu search for maximum score estimator as an R package
 
-# `hitsr`: High-Performance Discrete Tabu Search in R for max score estimator
+# `hitsr`: High-Performance Tabu Search in R - max score estimator
 
 [![R-CMD-check](https://img.shields.io/badge/R--build-passing-brightgreen.svg)](#)
 [![License: GPL v2+](https://img.shields.io/badge/License-GPL%20v2%2B-blue.svg)](#)
