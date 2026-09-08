@@ -1,4 +1,4 @@
-library(tabusearch)
+library(hitsr)
 
 # 1. Load and preprocess data
 X_raw <- as.matrix(read.table("X.txt"))
