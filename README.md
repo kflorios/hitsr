@@ -145,30 +145,6 @@ cat(sprintf("Score Std. Dev.:   %10.4f
 ", sd(results_df$Score)))
 cat("========================================================
 ")
-
-# -----------------------------------------------------------------------------
-# 5. Attribute Selection Frequency Analysis
-# -----------------------------------------------------------------------------
-# Unlist all selected attributes across all 20 runs
-all_selected <- unlist(lapply(results_list, function(r) {
-  as.numeric(strsplit(r$Attributes, ", ")[[1]])
-}))
-
-# Calculate selection counts and percentages
-attr_counts <- table(all_selected)
-attr_summary <- data.frame(
-  Attribute  = as.numeric(names(attr_counts)),
-  Frequency  = as.numeric(attr_counts),
-  Percentage = round(as.numeric(attr_counts) / num_runs * 100, 1)
-)
-
-# Sort by frequency (descending)
-attr_summary <- attr_summary[order(-attr_summary$Frequency), ]
-
-cat("
-Top Selected Attributes Across Runs:
-")
-print(attr_summary, row.names = FALSE)
 ```
 
 ---
