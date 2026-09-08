@@ -8,5 +8,5 @@ Description: High-performance C++ OpenMP implementation of discrete tabu search 
 License: GPL (>= 2)
 Imports: Rcpp (>= 1.0.0)
 LinkingTo: Rcpp
-RcppModules: tabu_module
+RcppModules: hitsr_module
 Config/roxygen2/version: 8.1.0
