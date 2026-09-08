@@ -101,9 +101,7 @@ seeds <- sample.int(1e6, num_runs)
 # Preallocate container
 results_list <- vector("list", num_runs)
 
-cat("Running 20 Tabu Search iterations across different random seeds...
-
-")
+cat("Running 20 Tabu Search iterations across different random seeds...")
 
 # -----------------------------------------------------------------------------
 # 3. Multi-Seed Loop
@@ -134,9 +132,7 @@ print(results_df, row.names = FALSE)
 # -----------------------------------------------------------------------------
 # 4. Global Performance Summary
 # -----------------------------------------------------------------------------
-cat("
-================ Summary Across 20 Runs ================
-")
+cat("================ Summary Across 20 Runs ================")
 cat(sprintf("Best Score Found:  %10.4f ", max(results_df$Score)))
 cat(sprintf("Mean Score:        %10.4f ", mean(results_df$Score)))
 cat(sprintf("Score Std. Dev.:   %10.4f ", sd(results_df$Score)))
