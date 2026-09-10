@@ -28,7 +28,7 @@ Ensure you have a C++ compiler supporting C++11 and OpenMP installed:
 - **macOS:** Install Xcode Command Line Tools (`xcode-select --install`) and an OpenMP-enabled `g++`/`clang`.
 - **Linux:** Install `r-base-dev` and `g++`.
 
-### Installing `hitsr`
+### Installing `hitsr` : Way 1
 
 Install the package directly from your local directory using `devtools`:
 
@@ -42,7 +42,7 @@ if (!requireNamespace("devtools", quietly = TRUE)) {
 devtools::install("path/to/hitsr")
 ```
 
-### Installing `hitsr`
+### Installing `hitsr` : Way 2 (preferred)
 
 Install the package directly from the Internet - GitHub (preferred):
 Open R/Rstudio as an Administrator.
