@@ -158,7 +158,7 @@ cat("Score Std Dev:    ", sd(results_df$Score), "\n")
 ---
 Distributed under the GPL-2 / GPL-3 License. See `LICENSE` for details.
 
-# Acknowledgements 
+## Acknowledgements 
 
 I would like to thank Dr. **Alexandros Louka** and Professor **Yannis Bilias** for their valuable help and the shared ideas for the development of HITSr. The development of the HITSr software was supported by the Hellenic Foundation for Research and Innovation (H.F.R.I.) under the '2nd Call for H.F.R.I. Research Projects to support Post-Doctoral Researchers' (Project Number: 902). 
 
