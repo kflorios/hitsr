@@ -9,7 +9,7 @@ y <- as.integer(y_raw[, 2])
 
 # 2. Parameters
 b0 <- -1.0
-d <- 10
+d <- 1e4
 num_runs <- 20
 
 # Generate 20 distinct random seeds

@@ -12,7 +12,7 @@ y <- as.integer(y_raw[, 2])
 
 # 3. Execution Parameters
 b0 <- -1.0
-d <- 10
+d <- 1e4
 iSeed <- 123456
 
 # 4. Run Tabu Search
