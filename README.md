@@ -57,7 +57,7 @@ if (!requireNamespace("remotes", quietly = TRUE)) {
 }
 
 # Install hitsr GitHub
-devtools::install_GitHub("kflorios/hitsr")
+devtools::install_github("kflorios/hitsr")
 ```
 
 
