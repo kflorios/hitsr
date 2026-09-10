@@ -14,7 +14,7 @@ extern "C" int run_tabu_search(
     int p_in,
     int* y_in,
     double b0,
-    int d,
+    double d,
     int iSeed,                 // <-- NEW ARGUMENT
     int* out_attributes,
     double* out_coeffs,
@@ -79,8 +79,10 @@ extern "C" int run_tabu_search(
     // Bounds (you can later tie these to d if desired)
     // -------------------------------------------------------------------------
     for (int j = 0; j < p; ++j) {
-        xlbound[j] = -1.0e300;
-        xubound[j] =  1.0e300;
+        //xlbound[j] = -1.0e300;
+        //xubound[j] =  1.0e300;
+        xlbound[j] = -d;
+        xubound[j] =  d;
     }
 
     // -------------------------------------------------------------------------

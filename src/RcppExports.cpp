@@ -11,7 +11,7 @@ Rcpp::Rostream<false>& Rcpp::Rcerr = Rcpp::Rcpp_cerr_get();
 #endif
 
 // cpp_run_tabu_search
-Rcpp::List cpp_run_tabu_search(Rcpp::NumericMatrix X_in, Rcpp::IntegerVector y_in, double b0, int d, int iSeed);
+Rcpp::List cpp_run_tabu_search(Rcpp::NumericMatrix X_in, Rcpp::IntegerVector y_in, double b0, double d, int iSeed);
 RcppExport SEXP _hitsr_cpp_run_tabu_search(SEXP X_inSEXP, SEXP y_inSEXP, SEXP b0SEXP, SEXP dSEXP, SEXP iSeedSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
@@ -19,7 +19,7 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< Rcpp::NumericMatrix >::type X_in(X_inSEXP);
     Rcpp::traits::input_parameter< Rcpp::IntegerVector >::type y_in(y_inSEXP);
     Rcpp::traits::input_parameter< double >::type b0(b0SEXP);
-    Rcpp::traits::input_parameter< int >::type d(dSEXP);
+    Rcpp::traits::input_parameter< double >::type d(dSEXP);
     Rcpp::traits::input_parameter< int >::type iSeed(iSeedSEXP);
     rcpp_result_gen = Rcpp::wrap(cpp_run_tabu_search(X_in, y_in, b0, d, iSeed));
     return rcpp_result_gen;

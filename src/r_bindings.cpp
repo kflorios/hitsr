@@ -7,7 +7,7 @@ extern "C" int run_tabu_search(
     int p_in,
     int* y_in,
     double b0,
-    int d,
+    double d,
     int iSeed,
     int* out_attributes,
     double* out_coeffs,
@@ -18,7 +18,7 @@ extern "C" int run_tabu_search(
 Rcpp::List cpp_run_tabu_search(Rcpp::NumericMatrix X_in, 
                               Rcpp::IntegerVector y_in, 
                               double b0, 
-                              int d, 
+                              double d, 
                               int iSeed) 
 {
     // X_in expected shape in R: (T, p_in)
