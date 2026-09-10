@@ -13,7 +13,7 @@ run_tabu_search(X, y, b0 = -1, d = 10, iSeed = 123456)
 
 \item{b0}{Double, intercept parameter.}
 
-\item{d}{Integer parameter.}
+\item{d}{Double parameter.}
 
 \item{iSeed}{Integer, random number generator seed.}
 }
