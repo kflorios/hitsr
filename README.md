@@ -57,7 +57,7 @@ run_tabu_search(X, y, b0 = -1.0, d = 10, iSeed = 123456)
 | `X` | `matrix` | *Required* | Feature matrix of size $T \times p_{\text{in}}$. |
 | `y` | `vector` | *Required* | Integer response/target vector of length $T$. |
 | `b0` | `numeric` | `-1.0` | Coefficient for first column of feature matrix. |
-| `d` | `integer` | `10` | Neighborhood depth / search parameter. |
+| `d` | `numeric` | `10` | Neighborhood depth / search parameter. |
 | `iSeed` | `integer` | `123456` | Pseudo-random number generator seed. |
 
 ### Return Value
@@ -85,7 +85,7 @@ y <- as.integer(y_raw[, 2])
 
 # 2. Parameters
 b0 <- -1.0
-d <- 10
+d <- 1e4
 num_runs <- 20
 
 # Generate 20 distinct random seeds
