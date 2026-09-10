@@ -10,3 +10,4 @@ Imports: Rcpp (>= 1.0.0)
 LinkingTo: Rcpp
 RcppModules: hitsr_module
 Config/roxygen2/version: 8.1.0
+Encoding: UTF-8
