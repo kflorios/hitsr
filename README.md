@@ -42,6 +42,25 @@ if (!requireNamespace("devtools", quietly = TRUE)) {
 devtools::install("path/to/hitsr")
 ```
 
+### Installing `hitsr`
+
+Install the package directly from the Internet - GitHub (preferred):
+Open R/Rstudio as an Administrator.
+
+```R
+# Install devtools and remotes if not already installed
+if (!requireNamespace("devtools", quietly = TRUE)) {
+  install.packages("devtools")
+}
+if (!requireNamespace("remotes", quietly = TRUE)) {
+  install.packages("remotes")
+}
+
+# Install hitsr GitHub
+devtools::install_GitHub("kflorios/hitsr")
+```
+
+
 ---
 
 ## Main Functionality
@@ -141,7 +160,7 @@ Distributed under the GPL-2 / GPL-3 License. See `LICENSE` for details.
 
 ## Citation
 
-If you use `hitsr` in your research, please cite the underlying methodology paper:
+If you use `hitsr` in your research, please cite the underlying methodology papers:
 
 ```bibtex
 @article{florios2025hits,
