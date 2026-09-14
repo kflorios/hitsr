@@ -121,7 +121,8 @@ for (i in seq_len(num_runs)) {
   current_seed <- seeds[i]
   
   # Execute Tabu Search
-  res <- run_tabu_search(X = X, y = y, b0 = b0, d = d, iSeed = current_seed)
+  #res <- run_tabu_search(X = X, y = y, b0 = b0, d = d, iSeed = current_seed)
+  res <- run_tabu_search(X = X, y = y, b0 = b0, d = d, iSeed = 12345+i)
   
   # Format selected attributes as a string (e.g., "1, 4, 7")
   attr_str <- paste(res$attributes, collapse = ", ")
@@ -149,6 +150,7 @@ cat("\n=== Summary Across 20 Runs ===\n")
 cat("Best Score Found: ", max(results_df$Score), "\n")
 cat("Mean Score:       ", mean(results_df$Score), "\n")
 cat("Score Std Dev:    ", sd(results_df$Score), "\n")
+
 ```
 
 ---
