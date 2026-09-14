@@ -130,7 +130,7 @@ for (i in seq_len(num_runs)) {
   # Save metrics
   results_list[[i]] <- data.frame(
     Run = i,
-    Seed = current_seed,
+    Seed = 12345+i,
     Score = res$score,
     Coeffs = res$coeffs,
     Num_Attributes = length(res$attributes),
@@ -150,7 +150,6 @@ cat("\n=== Summary Across 20 Runs ===\n")
 cat("Best Score Found: ", max(results_df$Score), "\n")
 cat("Mean Score:       ", mean(results_df$Score), "\n")
 cat("Score Std Dev:    ", sd(results_df$Score), "\n")
-
 ```
 
 ---
