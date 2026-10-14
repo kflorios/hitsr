@@ -122,8 +122,9 @@ for (i in seq_len(num_runs)) {
   
   # Execute Tabu Search
   #res <- run_tabu_search(X = X, y = y, b0 = b0, d = d, iSeed = current_seed)
+  try({
   res <- run_tabu_search(X = X, y = y, b0 = b0, d = d, iSeed = 12345+i)
-  
+  }, TRUE)
   # Format selected attributes as a string (e.g., "1, 4, 7")
   attr_str <- paste(res$attributes, collapse = ", ")
   
